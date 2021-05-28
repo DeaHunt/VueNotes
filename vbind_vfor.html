@@ -1,18 +1,36 @@
-
 <html>
-    
-    <div id="app" v-cloak>{{message}}</div>
- <div>
-    </div>
+<style type="text/css">
+    [v-cloak] {
+        display: none;
+    }
+</style>
+
+<div id="app" v-cloak v-html>
+    {{message}}
+    {{let1}}
+    <!-- <div ::alert1()></div> -->
+    <button v-on:click="alert1">alert</button>
+    <!-- {{alert1}} -->
+    <!-- // {{alert2}} -->
+</div>
+
+
 </html>
 <script src="./node_modules\jQuery\tmp\jquery.js"></script>
 <script src="./node_modules\vue\dist\vue.js"></script>
 <script>
-    
-    const vue= new Vue({
-        el:"#app",
-        data:{
-            message:"hello!"
+
+    const vue = new Vue({
+        el: "#app",
+        data: {
+            message: "hello!",
+            let1: "Vue"
+        },
+        methods: {
+            alert1: function () {
+                alert("yoo");
+            },
+            //alert2:'alert("yooo");'
         }
     })
 </script>

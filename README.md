@@ -1,7 +1,7 @@
 ﻿# VueNotes
-记录学习notes知识点
-基础语法
-更新1
+记录学习
+
+
 # 关于git 基础命令
 1.git add * 
 2.git commit -m "备注"

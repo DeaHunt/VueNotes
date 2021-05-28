@@ -5,19 +5,14 @@
     }
 </style>
 
-<div id="app" v-cloak v-html>
+<div id="app" v-cloak>
     {{message}}
-    {{let1}}
-    <!-- <div ::alert1()></div> -->
+    <input v-model="let1">{{let1}}</input>
     <button v-on:click="alert1">alert</button>
-    <!-- {{alert1}} -->
-    <!-- // {{alert2}} -->
 </div>
 
-
 </html>
-<script src="./node_modules\jQuery\tmp\jquery.js"></script>
-<script src="./node_modules\vue\dist\vue.js"></script>
+<script src=".\vue\vue.js"></script>
 <script>
 
     const vue = new Vue({

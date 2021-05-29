@@ -1,7 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+
+
 <style type="text/css">
     [v-cloak] {
         display: none;
+    }
+    .red{
+        color:red;
+    }
+    .blue{
+        color:blue;
     }
 </style>
 
@@ -18,9 +36,18 @@
         <todo-item v-for="item in groceryList" v-bind:todo='item' v-bind:key="item.id"></todo-item>
     </ol>
 </div>
-<div id="app-8"></div>
+<div id="app-8">{{a}}</div>
+<div id="app-9">
+    {{msg}}
+    <p> Using mustache:{{rewHtml}}</p>
+    <p v-bind:class="color">test..</p>
+    <p v-html="rewHtml"></p>
+    <p>{{number +1}}</p>
+    <p>{{message.split('').reverse().join('')}}</p>
+</div>
+
 </html>
-<script src=".\vue\vue.js"></script>
+<!-- <script src=".\vue\vue.js"></script> -->
 <script>
 
     const vue = new Vue({
@@ -47,16 +74,37 @@
         props: ['todo'],
         template: '<li>{{todo.text}}</li>'
     })
-var app7=new Vue({
-    el:"#app-7",
-    data:{
-        groceryList:[
-            {id:0,text:'蔬菜'},
-            {id:1,text:'奶酪'},
-            {id:2,text:'随便其他人'},
-            {id:3,text:'手动阀'},
-            {id:4,text:'萝卜'},
-        ]
-    }
-})
+    var app7 = new Vue({
+        el: "#app-7",
+        data: {
+            groceryList: [
+                { id: 0, text: '蔬菜' },
+                { id: 1, text: '奶酪' },
+                { id: 2, text: '随便其他人' },
+                { id: 3, text: '手动阀' },
+                { id: 4, text: '萝卜' },
+            ]
+        }
+    })
+    let datas = { a: "1" }
+    var app8 = new Vue({
+        el: "#app-8",
+        data: datas
+    })
+    app8.$watch('a', function (newVal, oldVal) {
+        console.log(newVal + "  " + oldVal);
+    })
+    app8.$data.a = "1->2"
+
+    var app9 = new Vue({
+        el: '#app-9',
+        data:{
+            msg: 'hi vue',
+            rewHtml: '<span style="color:red">this is should be red</span>',
+            color: 'blue',
+            number: 10,
+            ok: 1,
+            message: "vue"
+        }
+    })
 </script>

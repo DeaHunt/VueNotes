@@ -10,7 +10,7 @@
 3.git push origin master
 ```
 
-# [vim 命令](https://blog.csdn.net/pegasuswang_/article/details/24971531 "作者连接")
+# [vim 命令](https://blog.csdn.net/pegasuswang_/article/details/24971531 "连接")
 
 ```
 w 跳到下一个单词的开始

@@ -32,7 +32,6 @@ fa 跳到下一个a
  <sup>[[1]](#footnote-1)</sup> 
  <small>
 __译者注__
-<a id="footnote-1"></a>[1] ...
-<a id="footnote-2"></a>[2] ...
-<a id="footnote-3"></a>[3] ...
+<a id="footnote-1"></a>[1] This is a commentray.
+
 </small>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/vue.js"></script>
+    <style src="type/css">
+        .isred {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app"><ul>
+<li v-for="(st,i) in str" @click=makeRed(i)  :class="{isred:(i==flag? red=true :red=false)}">{{i}}---{{st}}</li>
+    </ul>
+        
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                flag:-1,
+                red: false,
+                str: {
+                    1: "a",
+                    2: "b",
+                    3: "c",
+                    4: "d"
+                }
+            },
+            methods: {
+                makeRed: function (i) {
+                    this.red = true;
+                    console.log('makeRed ' +i);
+                    this.flag=i;
+
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -26,6 +26,17 @@ ta 跳到下一个a 前面
 fa 跳到下一个a 
 大写的意思相反 
 ```
+[vim的剪贴板](https://blog.csdn.net/feng98ren/article/details/80509607 " vim粘贴板")
+```
+vim 的12个粘贴板0~9、a、"、+
+:reg 查看各个内容
+y 复制到 " 粘贴板里 (p 粘贴此板里内容) 临时粘贴板
+"Ny 完成复制 N 为粘贴板号
++ 号粘贴板是系统粘贴板 "+y  可用ctrl + v 来粘贴到其他文档 
+ctrl + c 的内容到vim 中 需要在正常模式下 "+p     
+
+:undo or :u  撤销
+```
 
 
 [简书](https://www.jianshu.com/p/399e5a3c7cc5 "创作你的创作")MD 语法

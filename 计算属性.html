@@ -12,6 +12,8 @@
     <div id="app">
         {{func1()}}  
         {{attr1}}
+        {{now1()}}
+        {{now}}
     </div>
     <script>
         var vm = new Vue({
@@ -20,11 +22,19 @@
             methods: {
                 func1: function () {
                     return "方法"
+                },
+                now1:function(){
+                    return Date.now();
                 }
+                
             },
             computed: {
                 attr1: function () {
                     return "计算属性"
+                    
+                },
+                now: function(){
+                    return Date.now();
                 }
             }
 

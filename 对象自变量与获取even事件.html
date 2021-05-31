@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="han()">按钮</button>
+        <button @click="han">按钮</button>
+        <button @click="han2(123)">按钮</button>
+        <button @click="han2">按钮</button>
+
+        <button @click="han3">按钮</button>
+        <button @click="han3($event)">按钮</button>
+
+        <button @click="han3()">按钮</button>
+
+        <button @click="han4()">按钮</button>
+        <button @click="han4(123,$event)">按钮</button>
+        <button @click="han4($event,$event)">按钮</button>
+
+
+        
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                bb: "bb1"
+            },
+            methods: {
+                han() {
+                    console.log("han1");
+                },
+                han2(aa) {
+                    console.log("han2",aa);
+                },
+                han3(aa) {
+                    console.log("han3",aa);
+                
+                },
+                han4(aa,bb) {
+                    console.log("han4",aa,bb);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

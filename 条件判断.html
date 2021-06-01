@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2 v-if="score > 90">优秀</h2>
+        <h2 v-else-if="score > 80">良</h2>
+        <h2 v-else-if="score > 70">差</h2>
+        <h2 v-else>不及格</h2>
+        <h1>{{fen}}</h1>
+    </div>
+    <script>
+        var vm=new Vue({
+           el:'#app',
+           data:{
+               score: 1
+           },
+           methods:{
+               
+           },
+           computed:{
+               fen(){
+                   if (this.score >90) return "优秀"
+                   else if(this.score >80) return "良"
+                   else if(this.score >79 ) return "差"
+                   else return "不及格"
+               }
+           }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 阻止冒泡 -->
+        <div @click="div1">
+            div...
+            <button @click.stop="btn">按钮</button>
+        </div>
+        <!-- 阻止默认事件 -->
+        <button @click.prevent="btn2">按钮2</button>
+        <form action="baidu">
+            <input type="submit" value="提交" @click.prevent="submit1">
+
+        </form>
+        <!-- 监听键盘事件 -->
+
+        <input type="text" @keyup.enter="keyUp"></input>
+
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {},
+            methods: {
+                div1() {
+                    console.log("div1");
+                },
+                btn() {
+                    console.log("按钮");
+                },
+                btn2() {
+                    console.log("按钮2");
+                },
+                submit1() {
+                    console.log("提交1");
+                },
+                keyUp() {
+                    console.log("会车按下升起时");
+                }
+
+            }
+        });
+    </script>
+</body>
+
+</html>

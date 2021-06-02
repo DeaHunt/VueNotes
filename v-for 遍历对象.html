@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+<div v-for="(value,key,index) in info">{{index}}--{{key}}-{{value}}--</div>
+    </div>
+    <script>
+        var vm=new Vue({
+           el:'#app',
+           data:{
+               info:{
+                   a:'aa',
+                   b:'bb',
+                   c:'cc'
+               }
+           },
+           methods:{}
+        });
+    </script>
+</body>
+
+</html> 

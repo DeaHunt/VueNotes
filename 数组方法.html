@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+       <ul>
+           <li v-for="item in str">{{item}}</li>
+       </ul> 
+       <button @click="btns">按钮</button>
+    </div>
+    <script>
+        var vm=new Vue({
+           el:'#app',
+           data:{
+               str:[ 'a','b','c','d','e','h','f','g']
+             
+           },
+           methods:{
+               btns(){
+                //    this.str.push("aaa")
+                // this.str.pop()
+                // this.str.shift()
+                // this.str.unshift("ddd","bbb")
+                // this.str.splice(1,3,"eee")
+                // this.str.splice(1,0,"eee")
+                // this.str.reverse()
+                // this.str.sort()
+                //vue自带的
+                // Vue.set(this.str, 0, "ccccc")
+                //非响应
+                // this.str[1]="cccc"
+               
+               }
+           }
+        });
+    </script>
+</body>
+
+</html>

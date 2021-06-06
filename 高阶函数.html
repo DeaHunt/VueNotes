@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{get}}
+        <h1></h1>
+        {{getfilter}}
+        <h1></h1>
+        {{getmap}}
+        <h2></h2>
+        {{getreduce}}
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                arr1: [1, 2, 3, 4, 5, 6, 7, 8, 77, 66, 55, 7, 5, 44, 444]
+            },
+            computed: {
+                get() {
+                    return this.arr1.filter(n => n < 5).map(n => n * 2).reduce((n, m) => n + m);
+
+                },
+                getfilter() {
+                    return this.arr1.filter(function (n) {
+                        return n > 55
+                    })
+                },getmap(){
+                    return this.arr1.map(function(n){
+                        return n *2
+                    })
+                },
+                getreduce(){
+                    return this.arr1.reduce(function(pre,n){
+                        return pre=pre +n
+                    },0)
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

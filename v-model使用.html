@@ -10,6 +10,7 @@
 
 <body>
     <div id="app">
+        <h2>v-model & radio</h2>
         <lable>
             <input type="radio" id="male" value="男" v-model="sex">男
         </lable>
@@ -19,21 +20,43 @@
         <div>
             {{sex}}
         </div>
+        <h2>v-model & checkbox</h2>
         <input type="checkbox" value="篮球。" v-model="hobbies">篮。
         <input type="checkbox" value="橄榄球" v-model="hobbies">橄榄球
         <input type="checkbox" value="乒乓球" v-model="hobbies">乒乓球
         <input type="checkbox" value="羽毛球" v-model="hobbies">羽毛球
         <div>{{hobbies}}</div>
+        <h2>v-model & select</h2>
+        <label>
+<select name="abc" value="请选择" v-model="fruit">
+    <option value="苹果">苹果</option>
+    <option value="香蕉">香蕉</option>
+    <option value="橘子">橘子</option>
+    <option value="榴莲">榴莲</option>
+</select>
+<div>{{fruit}}</div>
+<h2>v-model & select multiple</h2>
+<select name="abc" value="请选择" v-model="fruits" multiple>
+    <option value="苹果">苹果</option>
+    <option value="香蕉">香蕉</option>
+    <option value="橘子">橘子</option>
+    <option value="榴莲">榴莲</option>
+</select>
+<div>{{fruits}}</div>
+</label>
+
     </div>
     <script>
-        var vm=new Vue({
-           el:'#app',
-           data:{
-               message:'你好啊',
-               sex:'男',
-               hobbies:[]
-           },
-           methods:{}
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: '你好啊',
+                sex: '男',
+                hobbies: [],
+                fruit:'香蕉',
+                fruits:[]
+            },
+            methods: {}
         });
     </script>
 </body>

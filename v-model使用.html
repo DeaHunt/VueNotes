@@ -19,13 +19,19 @@
         <div>
             {{sex}}
         </div>
+        <input type="checkbox" value="篮球。" v-model="hobbies">篮。
+        <input type="checkbox" value="橄榄球" v-model="hobbies">橄榄球
+        <input type="checkbox" value="乒乓球" v-model="hobbies">乒乓球
+        <input type="checkbox" value="羽毛球" v-model="hobbies">羽毛球
+        <div>{{hobbies}}</div>
     </div>
     <script>
         var vm=new Vue({
            el:'#app',
            data:{
                message:'你好啊',
-               sex:'男'
+               sex:'男',
+               hobbies:[]
            },
            methods:{}
         });

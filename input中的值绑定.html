@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+	    <label v-for="item in ori" >
+		    <input type="checkbox" :value="item" :id="item" v-model="hbi" >{{item}}
+	    </label>
+	    {{hbi}}
+    </div>
+    <script>
+	var vm=new Vue({
+	   el:'#app',
+	   data:{
+		   ori:['篮球','足球','乒乓球','羽毛球','台球','高尔高'],
+		   hbi:[]
+	   },
+	   methods:{}
+	});
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="./vue/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<cpn>
+		</cpn>
+		<cpn>
+		</cpn>
+		<cpn></cpn>
+		<cpn></cpn>
+	</div>
+
+	<script>
+		const cmpt = Vue.extend({
+			template:
+				`
+			<div><div>title</div>
+			    <div>content</div>
+			 </div>`
+
+		})
+		Vue.component('cpn', cmpt);
+		var vm = new Vue({
+			el: '#app',
+			data: {},
+			methods: {}
+		});
+
+
+	</script>
+</body>
+
+</html>

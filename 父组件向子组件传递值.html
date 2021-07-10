@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="./vue/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<comp :cmoves='moves'></comp>
+	</div>
+	<template id="comp">
+		<div>
+			<h1>title</h1>
+			<ul>
+				<li v-for='t in cmoves'>{{t}}</li>
+			</ul>
+			{{cmoves}}
+		</div>
+
+	</template>
+	<script>
+		var comp = {
+			template: '#comp',
+			props: ['cmoves']
+		}
+		var vm = new Vue({
+			el: '#app',
+			data: {
+				moves: ['海王', '海贼王', '海尔兄弟']
+			},
+			methods: {},
+			components: {
+				comp
+			}
+
+
+		});
+	</script>
+</body>
+
+</html>
